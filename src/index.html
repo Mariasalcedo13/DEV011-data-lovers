@@ -10,7 +10,7 @@
     <header>
      <h1>POKEMON GO!</h1>
     </header>
-  
+    
     <nav>
       <ul id="root"style="display: none;">
         <li></li>
@@ -22,14 +22,19 @@
 
       </ul>
     </nav>
-
-    <div class="contenedor-nombre" >
-      <form id="formNombre" class="flex" >
+    
+<!--pantalla de ingresar nombre-->
+    <div class="contenedor-nombre">
+      
+      <form id="formNombre" class="flex">
         <label for="nombre">Ingresa tu nombre:</label>
         <input type="text" id="nombre" required>
-        <button type="submit" id="inicio" >Iniciar</button>
+        <button type="submit" id="inicio">Iniciar</button>
       </form>
+      
     </div>
+    
+    
     
     <section>
     <img src="img/1poke.jpg" id="imagen" alt="pokemon go">
@@ -39,7 +44,41 @@
     <!-- segunda pantalla donde esta las cards MAIN -->
     <main>
       <div class="contenedor-cards" style="display: none;">
-    </main>
+        
+        <!-- filter by type-->
+        <form>
+          <label for="select-filter">filtro por tipo:</label>
+          <select data-testid="select-filter" name="type">
+          <option value="normal">normal</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="grass">Grass</option>
+          <option value="electric">Electric</option>
+          <option value="psychic">Psychic</option>
+          <option value="dark">Dark</option>
+          <option value="fairy">Fairy</option>
+          <option value="Ice">Ice</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Poison">Poison</option>
+          <option value="Ground">Ground</option>
+          <option value="Bug">Bug</option>
+          <option value="Rock">Rock</option>
+          <option value="Ghost">Ghost</option>
+          <option value="Dragon">Dragon</option>
+          <option value="Dark">Dark</option>
+          <option value="Steel">Steel</option>
+        </select>
+        </form>
+
+        <!-- orden alfabetico -->
+       <select data-testid="select-sort" name="name">
+        <option value="asc">A - Z</option>
+        <option value="desc">Z - A</option>
+       </select>
+      
+       <button data-testid="button-clear">Limpiar</button>
+      </div>
+       </main>
 
      <!--inicio de footer-->
     <footer>
