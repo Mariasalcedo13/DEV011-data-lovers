@@ -11,20 +11,10 @@
      <h1>POKEMON GO!</h1>
     </header>
     
-    <nav>
-      <ul id="root"style="display: none;">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-
-      </ul>
-    </nav>
+   
     
 <!--pantalla de ingresar nombre-->
-    <div class="contenedor-nombre">
+    <div class="contenedor-nombre" >
       
       <form id="formNombre" class="flex">
         <label for="nombre">Ingresa tu nombre:</label>
@@ -36,12 +26,12 @@
     
     
     
-    <section>
+    <section class="imagenCentral">
     <img src="img/1poke.jpg" id="imagen" alt="pokemon go">
     </section>
-    <script src="main.js" type="module"></script>
+    
 
-    <!-- segunda pantalla donde esta las cards MAIN -->
+    <!-- segunda pantalla  MAIN -->
     <main>
       <div class="contenedor-cards" style="display: none;">
         
@@ -49,6 +39,7 @@
         <form>
           <label for="select-filter">filtro por tipo:</label>
           <select data-testid="select-filter" name="type">
+          <option value=""></option>
           <option value="normal">normal</option>
           <option value="fire">Fire</option>
           <option value="water">Water</option>
@@ -68,16 +59,37 @@
           <option value="Dark">Dark</option>
           <option value="Steel">Steel</option>
         </select>
-        </form>
+        
 
         <!-- orden alfabetico -->
+        <label for="select-sort">ordenar:</label>
        <select data-testid="select-sort" name="name">
+        <option value=""></option>
         <option value="asc">A - Z</option>
         <option value="desc">Z - A</option>
        </select>
-      
+
+       <label for="select-data">datos estadistico:</label>
+       <select data-testid="select-data" name="name">
+        <option value=""></option>
+        <option value="asc">Mayor</option>
+        <option value="desc">Menor</option>
+       </select>
+
        <button data-testid="button-clear">Limpiar</button>
       </div>
+    </form>
+    <nav>
+      <ul id="root"style="display: none;">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+      </ul>
+    </nav>
        </main>
 
      <!--inicio de footer-->
@@ -90,7 +102,7 @@
      </article>
      
      <!--informacion autor -->
-     <article class="reversa-mediaquiry">
+     <article>
       <article class=" estilo-inferior">
         <h3>The pokemon company</h3>
         <p>Autor: Desarrolladoras Maria salcedo y Maria valdebenito</p>
@@ -101,7 +113,7 @@
 
      
     </footer>
-  
+    <script src="main.js" type="module"></script>
   
   </body>
 </html>

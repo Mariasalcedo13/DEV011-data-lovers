@@ -78,6 +78,7 @@ img {
 
 .estilo-inferior p {
     font-size: 16px;
+    text-align: center;
 }
 
 
@@ -100,6 +101,8 @@ img {
   h3{
     animation: mover 4s infinite;
   }
+
+
 /* segunda pantalla*/
 .contenedor-cards {
     background: linear-gradient(to right, #78bbeef4, #0052a3);
@@ -131,16 +134,28 @@ img {
   button:hover {
     transform: scale(1.1);
   }
-  
-  
-  
-  
-  
-  
 
   
 
-
- /*-----Mobile: 480px----*/
- @media (max-width: 480px) {
- }
+  @media only screen and (max-width: 480px) {
+    
+    h1 {
+      font-size: 20px;
+    }
+    
+    .contenedor-cards {
+      display: none;
+    }
+    body {
+      font-size: 14px;
+    }
+    
+    #root {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+    
