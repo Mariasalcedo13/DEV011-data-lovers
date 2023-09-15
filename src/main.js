@@ -66,7 +66,6 @@ for (let i = 1 ; i <=252 ; i++) {
         
         pokemonCadaCards.appendChild(poke);
       });*/
-    });
-}
+
 
 crearCards();
