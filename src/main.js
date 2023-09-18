@@ -3,7 +3,6 @@ import { renderItems } from './view.js';
 
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, renderItems, data);
@@ -12,31 +11,7 @@ const formNombre = document.getElementById('formNombre');
 const contenedorCards = document.querySelector('.contenedor-cards');
 const imagen = document.getElementById('imagen');
 const footer = document.querySelector('footer');
-const contenedorTarjetas = document.getElementById("root");
-
-function crearTarjetas() {
-  data.pokemon.forEach(pokemon => {
-    const li = document.createElement("li");
-    const img = document.createElement("img");
-    img.src = pokemon.img;
-    li.textContent = `${pokemon.num}  ${pokemon.name}`;
-    li.appendChild(img);
-    contenedorTarjetas.appendChild(li);
-  });
-}
-crearTarjetas();
-
-/*data.pokemon.forEach(pokemon => {
-  
- const li = document.createElement("li");
-  li.textContent = pokemon.name;
-  contenedorTarjetas.appendChild(li);
-}); 
-
-*
-
-
-
+const pokemonCadaCards = document.querySelector('root li');
 
 
 
@@ -67,5 +42,25 @@ formNombre.addEventListener('submit', (event) => {
    imagen.style.display = 'none';
 });
 
+/*traer el pokemon*/
+function crearCards() {
+  fetch("pokemon.json")
+    .then(respuesta => respuesta.json())
+    .then(pokemon => {
+      const pokemonCadaCards = document.getElementById("root");
+      
+      pokemon.forEach(pokemon => {
+        const poke = document.createElement("tr");
+        poke.innerHTML = `
+          <td>${pokemon.num}</td>
+          <td>${pokemon.name}</td>
+          <td>${pokemon.type.join(", ")}</td>
+        `;
+        
+        pokemonCadaCards.appendChild(poke);
+      });
+    });
+}
 
+crearCards();
 
