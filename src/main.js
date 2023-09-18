@@ -12,7 +12,31 @@ const formNombre = document.getElementById('formNombre');
 const contenedorCards = document.querySelector('.contenedor-cards');
 const imagen = document.getElementById('imagen');
 const footer = document.querySelector('footer');
-const pokemonCadaCards = document.querySelector('root li');
+const contenedorTarjetas = document.getElementById("root");
+
+function crearTarjetas() {
+  data.pokemon.forEach(pokemon => {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = pokemon.img;
+    li.textContent = `${pokemon.num}  ${pokemon.name}`;
+    li.appendChild(img);
+    contenedorTarjetas.appendChild(li);
+  });
+}
+crearTarjetas();
+
+/*data.pokemon.forEach(pokemon => {
+  
+ const li = document.createElement("li");
+  li.textContent = pokemon.name;
+  contenedorTarjetas.appendChild(li);
+}); 
+
+*
+
+
+
 
 
 
@@ -29,9 +53,9 @@ formNombre.addEventListener('submit', (event) => {
   contenedorCards.style.display = 'block';
   imagen.style.display = 'none'; 
   footer.style.display = 'none'; 
-  mostrarCards();
+  /*mostrarCards();*/
 });
-formNombre.addEventListener('submit', handleFormSubmit);
+/*formNombre.addEventListener('submit', handleFormSubmit);*/
     
      
 
@@ -44,25 +68,4 @@ formNombre.addEventListener('submit', handleFormSubmit);
 });
 
 
-/*traer el pokemon*/
-function crearCards() {
-  fetch("pokemon.json")
-    .then(respuesta => respuesta.json())
-    .then(pokemon => {
-      const pokemonCadaCards = document.getElementById("root");
-      
-      pokemon.forEach(pokemon => {
-        const poke = document.createElement("tr");
-        poke.innerHTML = `
-          <td>${pokemon.num}</td>
-          <td>${pokemon.name}</td>
-          <td>${pokemon.type.join(", ")}</td>
-        `;
-        
-        pokemonCadaCards.appendChild(poke);
-      });
-    });
-}
-
-crearCards();
 

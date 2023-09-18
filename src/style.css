@@ -17,9 +17,9 @@ header {
 }
 .contenedor-nombre  {
     background: linear-gradient(to right, #78bbeef4, #0052a3);
-    padding: 0;
+    padding: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 
@@ -40,8 +40,8 @@ header {
 
 
 img {
-    width: 1350px; 
-    height: auto; 
+    width: 100%; 
+     
     
   }
  
@@ -137,10 +137,13 @@ img {
 
   
 
-  @media only screen and (max-width: 480px) {
+  @media  (max-width: 480px) {
     
     h1 {
       font-size: 20px;
+    }
+    body{
+      margin: 0;
     }
     
     .contenedor-cards {
@@ -154,8 +157,33 @@ img {
       display: block;
     }
     img {
-      width: 100%;
-      height: auto;
+     
+        max-width: 100%;
+        height: auto;
+       
+        
+        
+
     }
   }
+  
+  /* tarjeta */
+  
+  
+  .tarjetas-pokemon, ul{
+    justify-content:center;
+    display:flex;
+    background-color: #f9d2d263;
     
+    
+
+  }
+  
+  li {
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: inherit;
+    
+  }
+  
