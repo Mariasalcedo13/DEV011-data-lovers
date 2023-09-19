@@ -6,11 +6,12 @@ export const renderItems = (data) => {
   data.forEach(pokemon => {
     const li = document.createElement("li");
     const img = document.createElement("img");
+    const p = document.createElement("p");
     img.src = pokemon.img;
-    li.textContent = `${pokemon.num}  ${pokemon.name}${pokemon.type}`;
+    p.textContent = `${pokemon.num}  ${pokemon.name}${pokemon.type}`;
     li.appendChild(img);
+    li.appendChild(p)
     Tarjetas.appendChild(li);
   });
   return Tarjetas;
 };
-

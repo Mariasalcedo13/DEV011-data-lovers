@@ -44,10 +44,10 @@ formNombre.addEventListener('submit', (event) => {
      /*  colocar el nombre y sale mensaje de alerta */
     
    /*ocultar li , ul,imagen */
-   document.getElementById("inicio").addEventListener("click", function() {
+   /*document.getElementById("inicio").addEventListener("click", function() {
    document.getElementById("root1").style.display = "block";
    imagen.style.display = 'none';
-});
+});*/
 
 
 
