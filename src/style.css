@@ -170,12 +170,6 @@ img {
   /* tarjeta */
   
   
-  .tarjetas-pokemont, #root1{
-    justify-content:center;
-    display:flex;
-    background-color: #f9d2d263;
-
-  }
   
   li {
     list-style-type: none;

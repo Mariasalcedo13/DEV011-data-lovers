@@ -13,27 +13,9 @@ const contenedorCards = document.querySelector('.contenedor-cards');
 const imagen = document.getElementById('imagen');
 const footer = document.querySelector('footer');
 const contenedorTarjetas = document.getElementById("root1");
+const prueba = renderItems(data.pokemon)
+contenedorTarjetas.replaceWith(prueba)
 
-function crearTarjetas() {
-  data.pokemon.forEach(pokemon => {
-    const li = document.createElement("li");
-    const img = document.createElement("img");
-    img.src = pokemon.img;
-    li.textContent = `${pokemon.num}  ${pokemon.name}`;
-    li.appendChild(img);
-    contenedorTarjetas.appendChild(li);
-  });
-}
-crearTarjetas();
-
-/*data.pokemon.forEach(pokemon => {
-  
- const li = document.createElement("li");
-  li.textContent = pokemon.name;
-  contenedorTarjetas.appendChild(li);
-}); 
-
-*
 
 
 
