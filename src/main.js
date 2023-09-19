@@ -12,7 +12,7 @@ const formNombre = document.getElementById('formNombre');
 const contenedorCards = document.querySelector('.contenedor-cards');
 const imagen = document.getElementById('imagen');
 const footer = document.querySelector('footer');
-const contenedorTarjetas = document.getElementById("root");
+const contenedorTarjetas = document.getElementById("root1");
 
 function crearTarjetas() {
   data.pokemon.forEach(pokemon => {
@@ -63,7 +63,7 @@ formNombre.addEventListener('submit', (event) => {
     
    /*ocultar li , ul,imagen */
    document.getElementById("inicio").addEventListener("click", function() {
-   document.getElementById("root").style.display = "block";
+   document.getElementById("root1").style.display = "block";
    imagen.style.display = 'none';
 });
 
