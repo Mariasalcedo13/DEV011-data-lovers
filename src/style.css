@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
- }
+}
 
 
 .contenedor-nombre {
@@ -125,12 +125,8 @@ form {
 
 }
 
-ul{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.name, button {
+.name,
+button {
   margin-left: 600px;
   margin-top: 0;
 }
@@ -190,37 +186,49 @@ button:hover {
 
 /* tarjeta */
 
-
-
-
-/*li {
-  list-style-type: none;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  padding: inherit;
-}*/
-
 nav {
-  /*padding-right: 30px;*/
-  padding-left: 70px;
+  display: flex;
+  justify-content: center;
 }
 
-li  {
-  display:flex;
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   border: 1px solid lightgray;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
+  border-radius: 15px;
   font-family: sans-serif;
   margin: 10px;
   text-transform: uppercase;
   width: 30%;
   max-width: 250px;
-  text-align: center;
+  text-align: left;
+  color: #080e13;
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 
-img {
-  justify-content: center;
+p {
+  background-color: #007bff;
+}
 
+n {
+  background-color: #22a142;
+}
+
+t {
+  background-color: #a80a0a;
+}
+
+
+img {
+  justify-content: left
 }
