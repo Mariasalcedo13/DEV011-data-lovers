@@ -17,8 +17,10 @@ header {
 }
 
 #imagen1 {
-  display: start;
-  margin: 10dvh;
+  display: flex;
+  margin: 1dvh;
+  max-width: 15%;
+  justify-content: center;
 }
 
 .contenedor-nombre {
@@ -48,7 +50,6 @@ header {
 
 #imagen {
   width: 100%;
-
 
 }
 
@@ -217,15 +218,19 @@ li {
 }
 
 p {
-  background-color: #007bff;
+  background-color: #adc2d8;
+  border-radius: 5px;
+  
 }
 
 n {
-  background-color: #22a142;
+ background-color: #adc2d8;
+  border-radius: 5px;
 }
 
 t {
-  background-color: #a80a0a;
+  background-color: #adc2d8;
+  border-radius: 5px;
 }
 
 

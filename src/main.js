@@ -3,7 +3,7 @@ import { renderItems } from './view.js';
 
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-import pokemon from './data/pokemon/pokemon.js';
+//import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, renderItems, data);
@@ -20,7 +20,7 @@ contenedorTarjetas.replaceWith(prueba)
 
 
 
-
+contenedorTarjetas.style.display = 'none'
 
 /*  ocultar el form imagen y footer*/
 formNombre.addEventListener('submit', (event) => {
@@ -33,20 +33,18 @@ formNombre.addEventListener('submit', (event) => {
   localStorage.setItem('nombreUsuario', nombreUsuario);
   formNombre.style.display = 'none';
   contenedorCards.style.display = 'block';
-  imagen.style.display = 'none'; 
-  footer.style.display = 'none'; 
+  imagen.style.display = 'none';
+  footer.style.display = 'none';
   mostrarCards();
 });
 /*formNombre.addEventListener('submit', handleFormSubmit);*/
-    
-     
 
-     /*  colocar el nombre y sale mensaje de alerta */
-    
-   /*ocultar li , ul,imagen */
-   /*document.getElementById("inicio").addEventListener("click", function() {
-   document.getElementById("root1").style.display = "block";
-   imagen.style.display = 'none';
+/*  colocar el nombre y sale mensaje de alerta */
+
+/*ocultar li , ul,imagen */
+/*document.getElementById("inicio").addEventListener("click", function() {
+  document.getElementById("root1").style.display = "block";
+  imagen.style.display = 'none';
 });*/
 
 
