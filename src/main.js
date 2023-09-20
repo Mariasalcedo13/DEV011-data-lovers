@@ -16,11 +16,7 @@ const contenedorTarjetas = document.getElementById("root1");
 const prueba = renderItems(data.pokemon)
 contenedorTarjetas.replaceWith(prueba)
 
-
-
-
-
-
+contenedorTarjetas.style.display = 'none'
 
 /*  ocultar el form imagen y footer*/
 formNombre.addEventListener('submit', (event) => {
@@ -35,8 +31,13 @@ formNombre.addEventListener('submit', (event) => {
   contenedorCards.style.display = 'block';
   imagen.style.display = 'none'; 
   footer.style.display = 'none'; 
+  
+
   mostrarCards();
 });
+
+
+
 /*formNombre.addEventListener('submit', handleFormSubmit);*/
     
      
@@ -44,10 +45,11 @@ formNombre.addEventListener('submit', (event) => {
      /*  colocar el nombre y sale mensaje de alerta */
     
    /*ocultar li , ul,imagen */
-   document.getElementById("inicio").addEventListener("click", function() {
-   document.getElementById("root1").style.display = "block";
-   imagen.style.display = 'none';
-});
+   /*document.getElementById("inicio").addEventListener("click", function() { */
+  /* document.getElementById("root1").style.display = "block";*/
+  /* imagen.style.display = 'none'; 
+  
+});*/
 
 
 
