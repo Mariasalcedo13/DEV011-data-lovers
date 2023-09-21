@@ -2,23 +2,15 @@
 export const renderItems = (data) => {
   /*return 'example';*/
   const Tarjetas = document.createElement("ul");
+  const Tarjetas = document.createElement("ul");
   data.forEach(pokemon => {
     const li = document.createElement("li");
     const img = document.createElement("img");
-    const pokenum = document.createElement("pokenum");
-    const n = document.createElement("n");
-    const t = document.createElement("t");
-    const t2 = document.createElement("t2");
+    const p = document.createElement("p");
     img.src = pokemon.img;
-    pokenum.textContent = `${pokemon.num}`
-    n.textContent = `${pokemon.name}`
-    t.textContent = `${pokemon.type[0]}`
-    t2.textContent = `${pokemon.type[1]}`
+    p.textContent = `${pokemon.num}  ${pokemon.name}${pokemon.type}`;
     li.appendChild(img);
-    li.appendChild(pokenum)
-    li.appendChild(n)
-    li.appendChild(t)
-    li.appendChild(t2)
+    li.appendChild(p)
     Tarjetas.appendChild(li);
   });
   return Tarjetas;
