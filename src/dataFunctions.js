@@ -23,7 +23,6 @@ export const filterData = (data, filterBy, value) =>{
   
 };
 
-
 /*filtrado alfabetico*/
 export const sortDataByName = (data, sortOrder) => {
  const sortedData = [...data];

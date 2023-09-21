@@ -1,12 +1,8 @@
 body {
-  background-image: url(https://i.imgur.com/Bt0sdpD.jpg?1);
-  background-repeat: repeat;
-  background-attachment: fixed;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
-
+ }
 
 .contenedor-nombre {
   text-align: center;
@@ -20,10 +16,8 @@ header {
 }
 
 #imagen1 {
-  display: flex;
-  margin: 1dvh;
-  max-width: 15%;
-  justify-content: center;
+  display: start;
+  margin: 10dvh;
 }
 
 .contenedor-nombre {
@@ -32,7 +26,6 @@ header {
   display: flex;
   justify-content: right;
 }
-
 
 
 #inicio {
@@ -50,12 +43,10 @@ header {
   transform: translateX(5px);
 }
 
-
 #imagen {
   width: 100%;
 
 }
-
 
 /* estilos de footer */
 
@@ -93,7 +84,6 @@ header {
   text-align: center;
 }
 
-
 #footerlogo {
   width: 200px;
   height: auto;
@@ -117,7 +107,6 @@ h3 {
   animation: mover 4s infinite;
 }
 
-
 /* segunda pantalla*/
 .contenedor-cards {
   background: linear-gradient(to right, #78bbeef4, #0052a3);
@@ -129,8 +118,12 @@ form {
 
 }
 
-.name,
-button {
+ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name, button {
   margin-left: 600px;
   margin-top: 0;
 }
@@ -152,7 +145,6 @@ button {
 button:hover {
   transform: scale(1.1);
 }
-
 
 
 @media (max-width: 480px) {
@@ -184,7 +176,6 @@ button:hover {
 
 
 
-
   }
 }
 
@@ -194,7 +185,6 @@ nav {
   display: flex;
   justify-content: center;
 }
-
 
 ul {
   display: flex;
@@ -214,6 +204,36 @@ li {
   text-transform: uppercase;
   width: 30%;
   max-width: 250px;
+  text-align: left;
+  color: #080e13;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+pokenum {
+  background-color: #dce0e4b7;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0px;
+  
+}
+
+n {
+ background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+ 
+}
+
+t {
+  background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+}
+
+t2 {
+  background-color: #adc2d8;
+  border-radius: 8px;
   text-align: center;
 }
 
