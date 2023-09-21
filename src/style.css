@@ -190,37 +190,64 @@ button:hover {
 
 /* tarjeta */
 
-
-
-
-/*li {
-  list-style-type: none;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  padding: inherit;
-}*/
-
 nav {
-  /*padding-right: 30px;*/
-  padding-left: 70px;
+  display: flex;
+  justify-content: center;
 }
 
-li  {
-  display:flex;
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   border: 1px solid lightgray;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
+  border-radius: 15px;
   font-family: sans-serif;
   margin: 10px;
   text-transform: uppercase;
   width: 30%;
   max-width: 250px;
+  text-align: left;
+  color: #080e13;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+pokenum {
+  background-color: #dce0e4b7;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0px;
+  
+}
+
+n {
+ background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+ 
+}
+
+
+t {
+  background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+}
+
+t2 {
+  background-color: #adc2d8;
+  border-radius: 8px;
   text-align: center;
 }
 
 img {
-  justify-content: center;
-
+  justify-content: left
 }

@@ -17,29 +17,29 @@
   <!--pantalla de ingresar nombre-->
   <section class="contenedor-nombre">
 
-    <form id="formNombre" class="flex">
+   <!-- <form id="formNombre" class="flex">
       <label for="nombre">Ingresa tu nombre:</label>
       <input type="text" id="nombre" required>
       <button type="submit" id="inicio">Iniciar</button>
-    </form>
+    </form>-->
 
   </section>
 
 
 
-  <section class="imagenCentral">
+ <!-- <section class="imagenCentral">
     <img src="img/1poke.jpg" id="imagen" alt="pokemon go">
-  </section>
+  </section>-->
 
 
   <!-- segunda pantalla  MAIN -->
   <main>
-    <div class="contenedor-cards" style="display: none;">
+   <!-- <div class="contenedor-cards" style="display: none;">
 
       <!-- filter by type-->
       <form>
         <label for="select-filter">filtro por tipo:</label>
-        <select data-testid="select-filter" name="type">
+        <select class="filtro" data-testid="select-filter" name="type">
           <option value=""></option>
           <option value="normal">normal</option>
           <option value="fire">Fire</option>
@@ -64,7 +64,7 @@
 
         <!-- orden alfabetico -->
         <label for="select-sort">ordenar:</label>
-        <select data-testid="select-sort" name="name">
+        <select class="ordenletra" data-testid="select-sort" name="name">
           <option value=""></option>
           <option value="asc">A - Z</option>
           <option value="desc">Z - A</option>
@@ -82,7 +82,7 @@
     </form>
 
      <!--tarjetas-->
-    <section class="tarjetas-pokemon root" >
+    <section class="tarjetas-pokemon" id="root" >
       <nav >
         <ul id="root1"style="display: none;"></ul>
       </nav>
