@@ -9,14 +9,17 @@ export const renderItems = (data) => {
     const p = document.createElement("p");
     const n = document.createElement("n");
     const t = document.createElement("t");
+    const t2 = document.createElement("t2");
     img.src = pokemon.img;
     p.textContent = `${pokemon.num}`
     n.textContent = `${pokemon.name}`
-    t.textContent = `${pokemon.type}`
+    t.textContent = `${pokemon.type[0]}`
+    t2.textContent = `${pokemon.type[1]}`
     li.appendChild(img);
     li.appendChild(p)
     li.appendChild(n)
     li.appendChild(t)
+    li.appendChild(t2)
     Tarjetas.appendChild(li);
   });
   return Tarjetas;
