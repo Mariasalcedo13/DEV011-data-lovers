@@ -1,4 +1,4 @@
-import { example, filterData, sortDataByName ,} from './dataFunctions.js';
+import { calcularDamageByEnergy, example, filterData, sortDataByName ,} from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 // import data from './data/lol/lol.js';
@@ -18,6 +18,7 @@ contenedorTarjetas.replaceWith(prueba);
 const root = document.querySelector("#root");
 const selectFilter = document.querySelector('.filtro');
 const selectSort = document.querySelector('.ordenletra');
+const selectData = document.querySelector('.calculoestadistico');
 
 
 let pruebaarray =[]
@@ -38,6 +39,24 @@ selectSort.addEventListener('change', () => {
   const resultOrden = sortDataByName(validate, sortOrder);
   root.innerHTML = "";
   root.appendChild(renderItems(resultOrden));
+});
+
+//evento calculos estadistico
+// ...
+// Resto de tu código
+
+
+// Evento para cálculos estadísticos
+selectData.addEventListener('change', () => {
+  const selectedOption = selectData.value;
+  if (selectedOption === "") {
+    console.log("Por favor, selecciona una opción válida.");
+    return;
+  }
+  const data = [
+  ];
+  const { datosCalculados } = calcularDamageByEnergy(data, selectedOption);
+  console.log("Datos Calculados:", datosCalculados);
 });
 
 contenedorTarjetas.style.display = 'none'

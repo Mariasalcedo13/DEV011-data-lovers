@@ -44,3 +44,23 @@ console.log({data:sortedData})
 
   // return sortedData;
 };
+//filtrado por calculos
+export function calcularDamageByEnergy(data, selectedOption) {
+  const filteredData = data.filter((element) => element["energy"] !== 0 && element["base-damage"] !== 0);
+  
+  const calculatedData = filteredData.reduce((acc, element) => {
+    const damageByEnergy = element["base-damage"] / element["energy"];
+    acc.push(damageByEnergy);
+    return acc;
+  }, []).map((value) => value.toFixed(2));
+  
+  if (selectedOption === "asc") {
+    calculatedData.sort((a, b) => a - b);
+  } else if (selectedOption === "desc") {
+    calculatedData.sort((a, b) => b - a);
+  }
+
+  return {
+    datosCalculados: calculatedData,
+  };
+}
