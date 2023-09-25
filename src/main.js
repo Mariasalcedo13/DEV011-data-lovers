@@ -50,13 +50,15 @@ selectData.addEventListener('change', () => {
     console.log("Por favor, selecciona una opción válida.");
     return;
   }
-  const datosPokemon = data.pokemon ;
+  const datosPokemon = data.pokemon;
   if (!datosPokemon || datosPokemon.length === 0) {
     console.log("No hay datos de Pokémon disponibles para realizar cálculos.");
     return;
   }
   const datosCalculados = calcularPromedio(datosPokemon, selectedOption);
   console.log("Datos Calculados:", datosCalculados);
+  root.innerHTML = "";
+  root.appendChild(renderItems(datosCalculados));
   return;
 });
 

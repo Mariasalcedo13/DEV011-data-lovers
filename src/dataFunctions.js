@@ -45,17 +45,22 @@ console.log({data:sortedData})
   // return sortedData;
 };
 //filtrado por calculos
-export function calcularPromedio(data) {
-  return data.map((data) => {
+export function calcularPromedio(data,orden) {
+  const dataConPromedios = data.map((data) => {
     const ataquepoke = parseInt(data.stats["base-attack"]);
     const defensapoke = parseInt(data.stats["base-defense"]);
     const estaminapoke = parseInt(data.stats["base-stamina"]);
 
-    let dataPromedio = (ataquepoke + defensapoke + estaminapoke) / 3;
-    data["basePromedio"] = dataPromedio.toFixed();
-
+    data["basePromedio"] = (ataquepoke + defensapoke + estaminapoke) / 3;
     return data;
+  });
 
+  // Ordena 
+  if (orden === "Mayor") {
+    return dataConPromedios.sort((a, b) => a.basePromedio - b.basePromedio);
+  } else if (orden === "Menor") {
+    return dataConPromedios.sort((a, b) => b.basePromedio - a.basePromedio);
+  }
 
-});
-};
+  return dataConPromedios;
+}
