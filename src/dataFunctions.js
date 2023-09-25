@@ -45,31 +45,21 @@ console.log({data:sortedData})
   // return sortedData;
 };
 //filtrado por calculos
-export function calcularDamageByEnergy(data, selectedOption) {
-  console.log(selectedOption, 'ver');
-  const filteredData = data.filter((element) => {
-    // Aplica parseFloat para convertir las cadenas en números antes de la comparación
-    const energy = parseInt(element["energy"]);
-    // console.log(typeof energy) 
-    const baseDamage = parseInt(element["base-damage"]);
-    // console.log(typeof baseDamage)
-    return energy !== 0 && baseDamage !== 0;
-  });
-  console.log('filtrado: ', filteredData);
-  const calculatedData = filteredData.reduce((acc, element) => {
-    // Aplica parseFloat nuevamente si es necesario para realizar operaciones matemáticas
-    const energy = parseInt(element["energy"]);
-    const baseDamage = parseInt(element["base-damage"]);
-    const damageByEnergy = baseDamage / energy;
-    acc.push(damageByEnergy);
-    return acc;
-  }, []).map((value) => value.toFixed(2));
-  if (selectedOption === "Mayor") {
-    calculatedData.sort((a, b) => a - b);
-  } else if (selectedOption === "Menor") {
-    calculatedData.sort((a, b) => b - a);
-  }
-  return {
-    datosCalculados: calculatedData,
-  };
-}
+export function calcularPromedio(data) {
+  return data.map((data) => {
+    const ataquepoke = parseInt(data.stats["base-attack"]);
+    const defensapoke = parseInt(data.stats["base-defense"]);
+    const estaminapoke = parseInt(data.stats["base-stamina"]);
+
+    let dataPromedio = (ataquepoke + defensapoke + estaminapoke) / 3;
+    let dataDesviacion = (((ataquepoke - dataPromedio) ** 2 + (defensapoke - dataPromedio) ** 2 + (estaminapoke - dataPromedio) ** 2) / 2) ** (1 / 2);
+
+    data["baseDesviacion"] = dataDesviacion.toFixed(3);
+    data["baseProm"] = dataPromedio.toFixed();
+
+    return data;
+// hola sopa lo que queremos hacer es tener el promedio y la desviacion estandar de las stats hicimos es
+//esto pues tenemos un poco de idea acerca de eso
+
+});
+};
