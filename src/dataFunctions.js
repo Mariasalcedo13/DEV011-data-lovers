@@ -46,20 +46,29 @@ console.log({data:sortedData})
 };
 //filtrado por calculos
 export function calcularDamageByEnergy(data, selectedOption) {
-  const filteredData = data.filter((element) => element["energy"] !== 0 && element["base-damage"] !== 0);
-  
+  console.log(selectedOption, 'ver');
+  const filteredData = data.filter((element) => {
+    // Aplica parseFloat para convertir las cadenas en números antes de la comparación
+    const energy = parseInt(element["energy"]);
+    // console.log(typeof energy) 
+    const baseDamage = parseInt(element["base-damage"]);
+    // console.log(typeof baseDamage)
+    return energy !== 0 && baseDamage !== 0;
+  });
+  console.log('filtrado: ', filteredData);
   const calculatedData = filteredData.reduce((acc, element) => {
-    const damageByEnergy = element["base-damage"] / element["energy"];
+    // Aplica parseFloat nuevamente si es necesario para realizar operaciones matemáticas
+    const energy = parseInt(element["energy"]);
+    const baseDamage = parseInt(element["base-damage"]);
+    const damageByEnergy = baseDamage / energy;
     acc.push(damageByEnergy);
     return acc;
   }, []).map((value) => value.toFixed(2));
-  
-  if (selectedOption === "asc") {
+  if (selectedOption === "Mayor") {
     calculatedData.sort((a, b) => a - b);
-  } else if (selectedOption === "desc") {
+  } else if (selectedOption === "Menor") {
     calculatedData.sort((a, b) => b - a);
   }
-
   return {
     datosCalculados: calculatedData,
   };

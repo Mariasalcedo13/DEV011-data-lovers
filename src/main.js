@@ -32,6 +32,7 @@ root.appendChild(renderItems(resultFilter))
 })
 
 //evento por alfabetico
+let calculo=[]
 selectSort.addEventListener('change', () => {
   const sortOrder = selectSort.value;
   const validate = !pruebaarray.length > 0 ? data.pokemon : pruebaarray 
@@ -41,11 +42,6 @@ selectSort.addEventListener('change', () => {
   root.appendChild(renderItems(resultOrden));
 });
 
-//evento calculos estadistico
-// ...
-// Resto de tu código
-
-
 // Evento para cálculos estadísticos
 selectData.addEventListener('change', () => {
   const selectedOption = selectData.value;
@@ -53,11 +49,23 @@ selectData.addEventListener('change', () => {
     console.log("Por favor, selecciona una opción válida.");
     return;
   }
-  const data = [
-  ];
-  const { datosCalculados } = calcularDamageByEnergy(data, selectedOption);
+  const datosPokemon = data.pokemon ;
+  if (!datosPokemon || datosPokemon.length === 0) {
+    console.log("No hay datos de Pokémon disponibles para realizar cálculos.");
+    return;
+  }
+  const { datosCalculados } = calcularDamageByEnergy(datosPokemon, selectedOption);
   console.log("Datos Calculados:", datosCalculados);
+  return;
 });
+// selectData.addEventListener('change', () => {
+//  const selectedOption = selectData.value;
+//  const validar = !calculo.length > 0 ? data.pokemon : calculo
+// console.log({validar})
+//   const datanew = calcularDamageByEnergy(validar, selectedOption);
+//   root.innerHTML = "";
+// root.appendChild(renderItems(datanew));
+// });
 
 contenedorTarjetas.style.display = 'none'
 
