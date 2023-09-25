@@ -52,14 +52,10 @@ export function calcularPromedio(data) {
     const estaminapoke = parseInt(data.stats["base-stamina"]);
 
     let dataPromedio = (ataquepoke + defensapoke + estaminapoke) / 3;
-    let dataDesviacion = (((ataquepoke - dataPromedio) ** 2 + (defensapoke - dataPromedio) ** 2 + (estaminapoke - dataPromedio) ** 2) / 2) ** (1 / 2);
-
-    data["baseDesviacion"] = dataDesviacion.toFixed(3);
-    data["baseProm"] = dataPromedio.toFixed();
+    data["basePromedio"] = dataPromedio.toFixed();
 
     return data;
-// hola sopa lo que queremos hacer es tener el promedio y la desviacion estandar de las stats hicimos es
-//esto pues tenemos un poco de idea acerca de eso
+
 
 });
 };
