@@ -1,4 +1,4 @@
-import {  example, filterData, sortDataByName ,} from './dataFunctions.js';
+import {  calcularPromedio, example, filterData, sortDataByName ,} from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 // import data from './data/lol/lol.js';
