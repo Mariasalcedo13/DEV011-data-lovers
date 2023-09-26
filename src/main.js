@@ -1,4 +1,4 @@
-import {  calcularPromedio, example, filterData, sortDataByName ,} from './dataFunctions.js';
+import {  calcularPromedio, example, filterData, sortDataByName ,filtrarPorAtaqueBase, } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 // import data from './data/lol/lol.js';
@@ -16,10 +16,10 @@ const contenedorTarjetas = document.getElementById("root1");
 const prueba = renderItems(data.pokemon);
 contenedorTarjetas.replaceWith(prueba);
 const root = document.querySelector("#root");
-const selectFilter = document.querySelector('.filtro');
-const selectSort = document.querySelector('.ordenletra');
-const selectData = document.querySelector('.calculoestadistico');
-
+const selectFilter = document.querySelector('#filtro');
+const selectSort = document.querySelector('#ordenletra');
+const selectData = document.querySelector('#calculoestadistico');
+const selectAttack = document.querySelector('#filtro-ataque');
 
 let pruebaarray =[]
 //evento con filtrado
@@ -66,7 +66,16 @@ selectData.addEventListener('change', () => {
 contenedorTarjetas.style.display = 'none'
 
 
+//filtro por ataque
 
+
+let resultFilterAttack = [];
+selectAttack.addEventListener('change', () => {
+  const attackValue = parseInt(selectAttack.value, 10);
+  resultFilterAttack = filtrarPorAtaqueBase(data.pokemon, attackValue);
+  root.innerHTML = "";
+  root.appendChild(renderItems(resultFilterAttack));
+});
 
 
 

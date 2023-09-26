@@ -8,16 +8,19 @@ body {
   text-align: center;
 }
 
+
 header {
   background: linear-gradient(to right, #78bbeef4, #0052a3);
   padding: 0;
   display: flex;
-  justify-content: center;
+  text-align: left;
 }
 
+
 #imagen1 {
-  display: start;
-  margin: 10dvh;
+  display: inline;
+  max-width: 15%;
+  justify-content: center;
 }
 
 .contenedor-nombre {
@@ -151,6 +154,7 @@ button:hover {
 
   h1 {
     font-size: 20px;
+    text-align: left;
   }
 
   body {

@@ -13,7 +13,9 @@ export const renderItems = (data) => {
     pokenum.textContent = `${pokemon.num}`
     n.textContent = `${pokemon.name}`
     t.textContent = `${pokemon.type[0]}`
-    t2.textContent = `${pokemon.type[1]}`
+    if (pokemon.type[1]) {
+      t2.textContent = `${pokemon.type[1]}`
+    }
     li.appendChild(img);
     li.appendChild(pokenum)
     li.appendChild(n)

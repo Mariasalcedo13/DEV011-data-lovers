@@ -64,3 +64,20 @@ export function calcularPromedio(data,orden) {
 
   return dataConPromedios;
 }
+
+// TODO: revisar si funciona con parseInt
+//filtrado por calculos
+export const filtrarPorAtaqueBase = (data, ataqueMinimo) => {
+  return data.reduce((acumulador, pokemon) => {
+    // Convertimos el base-attack a número para poder compararlo
+    const ataqueBase = Number(pokemon.stats['base-attack']); // creo que se puede hacer con parseInt
+
+    // Verificamos si el ataque base es mayor que el valor mínimo proporcionado
+    if (ataqueBase > ataqueMinimo) {
+      // Si es así, lo añadimos al acumulador
+      acumulador.push(pokemon);
+    }
+    // Retornamos el acumulador para la siguiente iteración
+    return acumulador;
+  }, []); // Inicializamos el acumulador como un array vacío
+};

@@ -10,8 +10,8 @@
 <body>
   <!-- inicio de header-->
   <header>
-    <h1>POKEMON GO!</h1>
-    <!--<img src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Go-Logo-PNG-High-Quality-Image.png" id="imagen1" alt="pokemon go">-->
+    <h1>Bienvenido a...</h1>
+    <img src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Go-Logo-PNG-High-Quality-Image.png" id="imagen1" alt="pokemon go">
   </header>
 
   <!--pantalla de ingresar nombre-->
@@ -34,10 +34,10 @@
   <main>
    <!-- <div class="contenedor-cards" style="display: none;">
 
-      <!-- filter by type-->
+      <!- filter by type-->
       <form>
         <label for="select-filter">filtro por tipo:</label>
-        <select class="filtro" data-testid="select-filter" name="type">
+        <select id="filtro" data-testid="select-filter" name="type">
           <option value=""></option>
           <option value="normal">normal</option>
           <option value="fire">Fire</option>
@@ -61,19 +61,26 @@
 
         <!-- orden alfabetico -->
         <label for="select-sort">ordenar:</label>
-        <select class="ordenletra" data-testid="select-sort" name="name">
+        <select id="ordenletra" data-testid="select-sort" name="name">
           <option value=""></option>
           <option value="asc">A - Z</option>
           <option value="desc">Z - A</option>
         </select>
 
         <label for="select-data">datos estadistico:</label>
-        <select class="calculoestadistico" data-testid="select-data" name="name">
+        <select id="calculoestadistico" data-testid="select-data" name="name">
           <option value=""></option>
           <option value="Mayor">Mayor promedio</option>
           <option value="Menor">Menor promedio</option>
         </select>
-        
+
+        <label for="select-attack">filtro por ataque base:</label>
+        <select id="filtro-ataque" data-testid="select-attack" name="attack">
+          <option value=""></option>
+          <option value="50">Más de 50</option>
+          <option value="100">Más de 100</option>
+          <option value="150">Más de 150</option>
+        </select>
 
 
         <button data-testid="button-clear">Limpiar</button>
