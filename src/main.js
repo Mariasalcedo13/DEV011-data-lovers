@@ -79,7 +79,13 @@ selectAttack.addEventListener('change', () => {
 
 
 
-
+const botonLimpiar = document.getElementById('#Limpiar');
+botonLimpiar.addEventListener('click', function() {
+selectFilter = 0;
+selectSort = 0;
+selectData = 0;
+selectAttack = 0;
+});
 
 
 
