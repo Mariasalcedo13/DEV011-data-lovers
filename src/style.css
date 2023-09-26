@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,9 +14,9 @@ body {
 
 header {
   background: linear-gradient(to right, #78bbeef4, #0052a3);
-  padding: 0;
-  display: flex;
-  text-align: justify;
+ /* padding: 0;
+  display: flex;*/
+  text-align: center;
 }
 
 
@@ -153,7 +156,7 @@ button:hover {
 @media (max-width: 480px) {
 
   h1 {
-    font-size: 20px;
+    font-size: 10px;
     text-align: left;
   }
 
@@ -244,3 +247,13 @@ t2 {
 img {
   justify-content: left
 }
+
+/*estilo fondo*/
+body {
+  background-image: url(img/fondobacground.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
