@@ -79,12 +79,15 @@ selectAttack.addEventListener('change', () => {
 
 
 
-const botonLimpiar = document.getElementById('#Limpiar');
-botonLimpiar.addEventListener('click', function() {
-selectFilter = 0;
-selectSort = 0;
-selectData = 0;
-selectAttack = 0;
+const botonLimpiar = document.querySelector('#Limpiar');
+botonLimpiar.addEventListener('click', function(e) {
+  e.preventDefault()
+selectFilter.value = ""
+selectSort.value = ""
+selectData.value = ""
+selectAttack.value = ""
+root.innerHTML = "";
+root.appendChild(renderItems(data.pokemon));
 });
 
 
