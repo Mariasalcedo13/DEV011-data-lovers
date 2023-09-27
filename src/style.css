@@ -100,11 +100,19 @@ header {
 @keyframes mover {
   from {
     margin-left: 0;
+    
   }
 
   to {
     margin-left: 70%;
     /*movimiento de la letra*/
+  }
+  form {
+    display: inline-block;
+    background-color: blanchedalmond;
+    padding: 10px;
+    font-size: 30px;
+  
   }
 }
 
@@ -121,6 +129,9 @@ h3 {
 
 form {
   display: inline-block;
+  background-color: blanchedalmond;
+  padding: 10px;
+  font-size: 30px;
 
 }
 

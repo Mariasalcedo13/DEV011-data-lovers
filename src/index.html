@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
 <body>
   <!-- inicio de header-->
-  <header>
-    <h1>Bienvenido a...</h1>
-    <img src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Go-Logo-PNG-High-Quality-Image.png" id="imagen1" alt="pokemon go">
-  </header>
+    <header>
+        <h1>Bienvenido a...</h1>
+        <img src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Go-Logo-PNG-High-Quality-Image.png" id="imagen1" alt="pokemon go">
+    </header>
 
   <!--pantalla de ingresar nombre-->
   <section class="contenedor-nombre">
 
-   <!-- <form id="formNombre" class="flex">
-      <label for="nombre">Ingresa tu nombre:</label>
-      <input type="text" id="nombre" required>
-      <button type="submit" id="inicio">Iniciar</button>
-    </form>-->
+    <!-- <form id="formNombre" class="flex">
+        <label for="nombre">Ingresa tu nombre:</label>
+        <input type="text" id="nombre" required>
+        <button type="submit" id="inicio">Iniciar</button>
+        </form>-->
 
   </section>
 
@@ -35,88 +35,88 @@
    <!-- <div class="contenedor-cards" style="display: none;">
 
       <!- filter by type-->
-      <form>
-        <label for="select-filter">filtro por tipo:</label>
-        <select id="filtro" data-testid="select-filter" name="type">
-          <option value=""></option>
-          <option value="normal">normal</option>
-          <option value="fire">Fire</option>
-          <option value="water">Water</option>
-          <option value="grass">Grass</option>
-          <option value="electric">Electric</option>
-          <option value="psychic">Psychic</option>
-          <option value="dark">Dark</option>
-          <option value="fairy">Fairy</option>
-          <option value="Ice">Ice</option>
-          <option value="Fighting">Fighting</option>
-          <option value="Poison">Poison</option>
-          <option value="Ground">Ground</option>
-          <option value="Bug">Bug</option>
-          <option value="Rock">Rock</option>
-          <option value="Ghost">Ghost</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Dark">Dark</option>
-          <option value="Steel">Steel</option>
-        </select>
+        <form>
+          <label for="select-filter">filtro por tipo:</label>
+          <select id="filtro" data-testid="select-filter" name="type">
+            <option value=""></option>
+            <option value="normal">normal</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="grass">Grass</option>
+            <option value="electric">Electric</option>
+            <option value="psychic">Psychic</option>
+            <option value="dark">Dark</option>
+            <option value="fairy">Fairy</option>
+            <option value="Ice">Ice</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Poison">Poison</option>
+            <option value="Ground">Ground</option>
+            <option value="Bug">Bug</option>
+            <option value="Rock">Rock</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Dark">Dark</option>
+            <option value="Steel">Steel</option>
+          </select>
 
-        <!-- orden alfabetico -->
-        <label for="select-sort">ordenar:</label>
-        <select id="ordenletra" data-testid="select-sort" name="name">
-          <option value=""></option>
-          <option value="asc">A - Z</option>
-          <option value="desc">Z - A</option>
-        </select>
+          <!-- orden alfabetico -->
+          <label for="select-sort">ordenar:</label>
+          <select id="ordenletra" data-testid="select-sort" name="name">
+            <option value=""></option>
+            <option value="asc">A - Z</option>
+            <option value="desc">Z - A</option>
+          </select>
 
-        <label for="select-data">datos estadistico:</label>
-        <select id="calculoestadistico" data-testid="select-data" name="name">
-          <option value=""></option>
-          <option value="Mayor">Mayor promedio</option>
-          <option value="Menor">Menor promedio</option>
-        </select>
+          <label for="select-data">datos estadistico:</label>
+          <select id="calculoestadistico" data-testid="select-data" name="name">
+            <option value=""></option>
+            <option value="Mayor">Mayor promedio</option>
+            <option value="Menor">Menor promedio</option>
+          </select>
 
-        <label for="select-attack">filtro por ataque base:</label>
-        <select id="filtro-ataque" data-testid="select-attack" name="attack">
-          <option value=""></option>
-          <option value="50">Más de 50</option>
-          <option value="100">Más de 100</option>
-          <option value="150">Más de 150</option>
-        </select>
+          <label for="select-attack">filtro por ataque base:</label>
+          <select id="filtro-ataque" data-testid="select-attack" name="attack">
+            <option value=""></option>
+            <option value="50">Más de 50</option>
+            <option value="100">Más de 100</option>
+            <option value="150">Más de 150</option>
+          </select>
 
 
-        <button id="Limpiar" data-testid="button-clear">Limpiar</button>
-    </div>
-    </form>
+          <button id="Limpiar" data-testid="button-clear">Limpiar</button>
+      </div>
+      </form>
 
      <!--tarjetas-->
     <section class="tarjetas-pokemon" id="root" >
-      <nav >
-        <ul id="root1"style="display: none;"></ul>
-      </nav>
+        <nav >
+          <ul id="root1"style="display: none;"></ul>
+        </nav>
     </section>
    </main>
 
   <!--inicio de footer-->
   <footer>
     <article>
-      <article class="flex  footer-estilo ">
-        <img src="img/imagen3footer.jpg!d" id="footerlogo" alt="footerpokemon">
-        <h2 class="tamaño-letra"> Durante el combate observa tu mejor estrategia!</h2>
-      </article>
+        <article class="flex  footer-estilo ">
+          <img src="img/imagen3footer.jpg!d" id="footerlogo" alt="footerpokemon">
+          <h2 class="tamaño-letra"> Durante el combate observa tu mejor estrategia!</h2>
+        </article>
     </article>
 
     <!--informacion autor -->
-    <article>
-      <article class=" estilo-inferior">
-        <h3>The pokemon company</h3>
-        <p>Autor: Desarrolladoras Maria salcedo y Maria valdebenito</p>
-        <p>©2023 Pokémon. ©1995 - 2023 Nintendo/Creatures Inc./GAME FREAK inc. TM, ®Nintendo.</p>
+      <article>
+        <article class=" estilo-inferior">
+          <h3>The pokemon company</h3>
+          <p>Autor: Desarrolladoras Maria salcedo y Maria valdebenito</p>
+          <p>©2023 Pokémon. ©1995 - 2023 Nintendo/Creatures Inc./GAME FREAK inc. TM, ®Nintendo.</p>
 
+        </article>
       </article>
-    </article>
 
-  </footer>
-  <script src="main.js" type="module"></script>
+    </footer>
+    <script src="main.js" type="module"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>
