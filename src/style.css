@@ -128,10 +128,10 @@ h3 {
 }
 
 form {
-  display: inline-block;
+  display: flex;
   background-color: blanchedalmond;
   padding: 10px;
-  font-size: 30px;
+  
 
 }
 
@@ -157,6 +157,7 @@ button {
 
 button {
   transition: all 0.3s ease;
+  margin-left: 40px;
 }
 
 button:hover {
