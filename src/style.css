@@ -281,4 +281,5 @@ transition: transform 0.3s; /* Agregamos una transición suave para suavizar el 
 
 .tarjetaPokedex:hover {
   transform: translateX(20px); /* Mueve la tarjeta 20px hacia la derecha cuando se coloca el cursor */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Cambiamos la sombra al pasar el cursor */
 }
