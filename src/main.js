@@ -3,15 +3,15 @@ import { renderItems } from './view.js';
 
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-import pokemon from './data/pokemon/pokemon.js';
+//import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, renderItems, data);
 // pagina principal
 //const formNombre = document.getElementById('formNombre');
-const contenedorCards = document.querySelector('.contenedor-cards');
-const imagen = document.getElementById('imagen');
-const footer = document.querySelector('footer');
+//const contenedorCards = document.querySelector('.contenedor-cards');
+//const imagen = document.getElementById('imagen');
+//const footer = document.querySelector('footer');
 const contenedorTarjetas = document.getElementById("root1");
 const prueba = renderItems(data.pokemon);
 contenedorTarjetas.replaceWith(prueba);
@@ -24,11 +24,11 @@ const selectAttack = document.querySelector('#filtro-ataque');
 let pruebaarray =[]
 //evento con filtrado
 selectFilter.addEventListener('change',() =>{
-const resultFilter =filterData(data,'type',selectFilter.value)
-console.log(resultFilter);
-pruebaarray = resultFilter
-root.innerHTML = "";
-root.appendChild(renderItems(resultFilter))
+  const resultFilter =filterData(data,'type',selectFilter.value)
+  console.log(resultFilter);
+  pruebaarray = resultFilter
+  root.innerHTML = "";
+  root.appendChild(renderItems(resultFilter))
 })
 
 //evento por alfabetico
@@ -82,12 +82,12 @@ selectAttack.addEventListener('change', () => {
 const botonLimpiar = document.querySelector('#Limpiar');
 botonLimpiar.addEventListener('click', function(e) {
   e.preventDefault()
-selectFilter.value = ""
-selectSort.value = ""
-selectData.value = ""
-selectAttack.value = ""
-root.innerHTML = "";
-root.appendChild(renderItems(data.pokemon));
+  selectFilter.value = ""
+  selectSort.value = ""
+  selectData.value = ""
+  selectAttack.value = ""
+  root.innerHTML = "";
+  root.appendChild(renderItems(data.pokemon));
 });
 
 
@@ -115,10 +115,10 @@ root.appendChild(renderItems(data.pokemon));
     
      
 
-     /*  colocar el nombre y sale mensaje de alerta */
+/*  colocar el nombre y sale mensaje de alerta */
     
-   /*ocultar li , ul,imagen */
-   /*document.getElementById("inicio").addEventListener("click", function() {
+/*ocultar li , ul,imagen */
+/*document.getElementById("inicio").addEventListener("click", function() {
    document.getElementById("root1").style.display = "block";*/
-  /* imagen.style.display = 'none';
+/* imagen.style.display = 'none';
 });*/

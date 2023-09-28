@@ -8,25 +8,25 @@ export const anotherExample = () => {
   return [];
 };
 
-  
- /*filtrado por tipo */
-export const filterData = (data, filterBy, value) =>{
+
+/*filtrado por tipo */
+export const filterData = (data, filterBy, value) => {
   console.log(data.pokemon)
-  const filtrado = data.pokemon.filter((element)=>{
-    console.log(element[filterBy],value)
+  const filtrado = data.pokemon.filter((element) => {
+    console.log(element[filterBy], value)
     return element[filterBy].includes(value)
 
   })
 
   console.log(filtrado)
   return filtrado
-  
+
 };
 
 /*filtrado alfabetico*/
 export const sortDataByName = (data, sortOrder) => {
- const sortedData = [...data];
-console.log({data:sortedData})
+  const sortedData = [...data];
+  console.log({ data: sortedData })
   return sortedData.sort((a, b) => {
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
@@ -34,18 +34,18 @@ console.log({data:sortedData})
     if (sortOrder === 'asc') {
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
-      return 0; 
+      return 0;
     } else if (sortOrder === 'desc') {
       if (nameA > nameB) return -1;
       if (nameA < nameB) return 1;
-      return 0; 
+      return 0;
     }
   });
 
   // return sortedData;
 };
 //filtrado por calculos
-export function calcularPromedio(data,orden) {
+export function calcularPromedio(data, orden) {
   const dataConPromedios = data.map((data) => {
     const ataquepoke = parseInt(data.stats["base-attack"]);
     const defensapoke = parseInt(data.stats["base-defense"]);

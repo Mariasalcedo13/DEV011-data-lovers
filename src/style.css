@@ -1,11 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
- }
+}
 
 .contenedor-nombre {
   text-align: center;
@@ -14,7 +15,7 @@ body {
 
 header {
   background: linear-gradient(to right, #78bbeef4, #0052a3);
- /* padding: 0;
+  /* padding: 0;
   display: flex;*/
   text-align: center;
 }
@@ -100,19 +101,20 @@ header {
 @keyframes mover {
   from {
     margin-left: 0;
-    
+
   }
 
   to {
     margin-left: 70%;
     /*movimiento de la letra*/
   }
+
   form {
     display: inline-block;
     background-color: blanchedalmond;
     padding: 10px;
     font-size: 30px;
-  
+
   }
 }
 
@@ -131,16 +133,17 @@ form {
   display: flex;
   background-color: blanchedalmond;
   padding: 10px;
-  
+
 
 }
 
-ul{
+ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-.name, button {
+.name,
+button {
   margin-left: 600px;
   margin-top: 0;
 }
@@ -234,14 +237,14 @@ pokenum {
   border-radius: 8px;
   text-align: center;
   padding: 0px;
-  
+
 }
 
 n {
- background-color: #adc2d8;
+  background-color: #adc2d8;
   border-radius: 8px;
   text-align: center;
- 
+
 }
 
 t {
@@ -268,4 +271,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
