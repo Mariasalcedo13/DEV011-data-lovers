@@ -276,4 +276,9 @@ body {
 }
 .tarjetaPokedex{
 background: linear-gradient(to right, #a9dea6f4, #b4fba9);
+transition: transform 0.3s; /* Agregamos una transición suave para suavizar el movimiento */
+}
+
+.tarjetaPokedex:hover {
+  transform: translateX(20px); /* Mueve la tarjeta 20px hacia la derecha cuando se coloca el cursor */
 }
