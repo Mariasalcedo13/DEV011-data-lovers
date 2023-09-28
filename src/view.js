@@ -4,6 +4,9 @@ export const renderItems = (data) => {
   const Tarjetas = document.createElement("ul");
   data.forEach(pokemon => {
     const li = document.createElement("li");
+    li.setAttribute("itemscope", "")
+    li.setAttribute("itemtype", "pokemon")
+    li.setAttribute("class","tarjetaPokedex")
     const img = document.createElement("img");
     const pokenum = document.createElement("pokenum");
     const n = document.createElement("n");

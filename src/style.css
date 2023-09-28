@@ -111,7 +111,8 @@ header {
 
   form {
     display: inline-block;
-    background-color: blanchedalmond;
+    background-color:#d3ddd6;
+    background-image: url(img/pokebolas.png);
     padding: 10px;
     font-size: 30px;
 
@@ -131,8 +132,10 @@ h3 {
 
 form {
   display: flex;
-  background-color: blanchedalmond;
+  background-color: #060606;
   padding: 10px;
+  color: #fcfcfc;
+  font-family: 'Press Start 2P', serif;
 
 
 }
@@ -270,4 +273,7 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+}
+.tarjetaPokedex{
+background: linear-gradient(to right, #a9dea6f4, #b4fba9);
 }
