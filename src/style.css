@@ -193,6 +193,9 @@ button:hover {
 
   #root1 {
     display: block;
+    margin: 1px;
+    border: 1px;
+    padding: 1px;
   }
 
   #imagen {
@@ -216,6 +219,10 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 1px;
+  margin: 1px;
+  border: 1px;
+
 }
 
 li {
@@ -234,34 +241,44 @@ li {
   color: #080e13;
   background-color: whitesmoke;
   cursor: pointer;
+  padding: 1px;
 }
 
 pokenum {
+  display: flexbox;
   background-color: #dce0e4b7;
   border-radius: 8px;
   text-align: center;
-  padding: 0px;
+  padding: 2px;
   border: 1px dashed black;
-
+  margin: 2px;
 }
 
 n {
   background-color: #adc2d8;
   border-radius: 8px;
   text-align: center;
-
+  padding: 2px;
+  border: 1px black;
+  margin: 2px;
 }
 
 t {
   background-color: #adc2d8;
   border-radius: 8px;
   text-align: center;
+  padding: 2px;
+  border: 1px black;
+  margin: 2px;
 }
 
 t2 {
   background-color: #adc2d8;
   border-radius: 8px;
   text-align: center;
+  padding: 2px;
+  border: 1px black;
+  margin: 2px;
 }
 
 img {
