@@ -71,7 +71,7 @@ export const filtrarPorAtaqueBase = (data, ataqueMinimo) => {
   return data.reduce((acumulador, pokemon) => {
     // Convertimos el base-attack a número para poder compararlo
     const ataqueBase = Number(pokemon.stats['base-attack']); // creo que se puede hacer con parseInt
-
+    console.log(ataqueBase)
     // Verificamos si el ataque base es mayor que el valor mínimo proporcionado
     if (ataqueBase > ataqueMinimo) {
       // Si es así, lo añadimos al acumulador

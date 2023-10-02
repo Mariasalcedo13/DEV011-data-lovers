@@ -109,19 +109,64 @@ describe('calcularPromedio', () => {
 //P.U base de ataque
 
 describe('filtrarPorAtaqueBase', () => {
-  it('debería filtrar Pokémon con ataque base mayor que 150', () => {
-    const resultado = filtrarPorAtaqueBase(dataFake, 150);
+  it('debería filtrar Pokémon con ataque base mayor que 100', () => {
+    const resultado = filtrarPorAtaqueBase(fakeData, 100);
 
+    // Esperamos que solo Venusaur cumpla con el requisito
     expect(resultado).toEqual([
-      { name: 'ivysaur', stats: { 'base-attack': '151' } },
-      { name: 'venusaur', stats: { 'base-attack': '198' } },
+      {
+        num: "001",
+        name: "bulbasaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 118, "base-defense": 111, "base-stamina": 128 },
+        basePromedio: 119
+      },
+      {
+        num: "002",
+        name: "ivysaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
+        basePromedio: 149.66666666666666
+      },
+      {
+        num: "003",
+        name: "venusaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
+        basePromedio: 192.33333333333334
+      }
+    ]);
+  });
+
+  it('debería filtrar Pokémon con ataque base mayor que 150', () => {
+    const resultado = filtrarPorAtaqueBase(fakeData, 150);
+
+    // Esperamos que solo Venusaur cumpla con el requisito
+    expect(resultado).toEqual([
+      {
+        num: "002",
+        name: "ivysaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
+        basePromedio: 149.66666666666666
+      },
+      {
+        num: "003",
+        name: "venusaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
+        basePromedio: 192.33333333333334
+      }
     ]);
   });
 
   it('debería filtrar Pokémon con ataque base mayor que 200', () => {
-    const resultado = filtrarPorAtaqueBase(dataFake, 200);
+    const resultado = filtrarPorAtaqueBase(fakeData, 200);
 
     expect(resultado).toEqual([]);
   });
-});
+
   
+
+  // Otras pruebas aquí...
+});
