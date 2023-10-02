@@ -1,40 +1,26 @@
-import { filterData, sortDataByName,  } from '../src/dataFunctions.js';
+import { calcularPromedio, filterData, sortDataByName,  } from '../src/dataFunctions.js';
 import {  data as fakeData } from './data.js';
 
 console.log(fakeData);
 
 
 describe('filterData', () => {
-  const dataFake = [
-    { num: "001", name: "bulbasaur", type: ["grass", "poison"], basePromedio: 119 },
-    { num: "002", name: "ivysaur", type: ["grass", "poison"], basePromedio: 149.66666666666666 },
-    { num: "003", name: "venusaur", type: ["grass", "poison"], basePromedio: 192.33333333333334 }
-  ];
-
-  it('debería filtrar por tipo "grass" y devolver solo los nombres', () => {
+  it('debería filtrar por tipo "grass" y devolver solo los Pokémon del tipo correspondiente', () => {
     const filterBy = 'type';
     const value = 'grass';
 
-    const resultado = filterData({ pokemon: dataFake }, filterBy, value).map(pokemon => pokemon.name);
-
-    expect(resultado).toEqual(["bulbasaur", "ivysaur", "venusaur"]);
+    const resultado = filterData({ pokemon: fakeData }, filterBy, value);
+    const todosSonDeTipoGrass = resultado.every(pokemon => pokemon.type.includes('grass'));
+    expect(todosSonDeTipoGrass).toBe(true);
   });
-
-  
 });
 
 //p.u alfabetico
 describe('sortDataByName', () => {
-  const dataFake = [
-    { num: "003", name: "venusaur", type: ["grass", "poison"], basePromedio: 192.33333333333334 },
-    { num: "001", name: "bulbasaur", type: ["grass", "poison"], basePromedio: 119 },
-    { num: "002", name: "ivysaur", type: ["grass", "poison"], basePromedio: 149.66666666666666 },
-  ];
-
   it('debería ordenar de la A a la Z', () => {
     const sortOrder = 'asc';
 
-    const resultado = sortDataByName(dataFake, sortOrder).map(pokemon => pokemon.name);
+    const resultado = sortDataByName(fakeData, sortOrder).map(pokemon => pokemon.name);
 
     expect(resultado).toEqual(["bulbasaur", "ivysaur", "venusaur"]);
   });
@@ -42,16 +28,82 @@ describe('sortDataByName', () => {
   it('debería ordenar de la Z a la A', () => {
     const sortOrder = 'desc';
 
-    const resultado = sortDataByName(dataFake, sortOrder).map(pokemon => pokemon.name);
+    const resultado = sortDataByName(fakeData, sortOrder).map(pokemon => pokemon.name);
 
     expect(resultado).toEqual(["venusaur", "ivysaur", "bulbasaur"]);
   });
 });
 
-
 //p.u calculos
+describe('calcularPromedio', () => {
+  it('debería ser una función', () => {
+    expect(typeof calcularPromedio).toBe('function');
+  });
 
+  it('debería calcular el promedio de menor correctamente', () => {
+    const orden = 'Menor';
 
+    const resultadoMenor = calcularPromedio(fakeData, orden);
+
+    const resultadoEsperadoMenor = [
+      {
+        num: "001",
+        name: "bulbasaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 118, "base-defense": 111, "base-stamina": 128 },
+        basePromedio: 119
+      },
+      {
+        num: "002",
+        name: "ivysaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
+        basePromedio: 149.66666666666666
+      },
+      {
+        num: "003",
+        name: "venusaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
+        basePromedio: 192.33333333333334
+      }
+    ];
+
+    expect(resultadoMenor).toEqual(resultadoEsperadoMenor);
+  });
+
+  it('debería calcular el promedio de mayor correctamente', () => {
+    const orden = 'Mayor';
+
+    const resultadoMayor = calcularPromedio(fakeData, orden);
+
+    const resultadoEsperadoMayor = [
+      {
+        num: "003",
+        name: "venusaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
+        basePromedio: 192.33333333333334
+      },
+      {
+        num: "002",
+        name: "ivysaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
+        basePromedio: 149.66666666666666
+      },
+      {
+        num: "001",
+        name: "bulbasaur",
+        type: ["grass", "poison"],
+        stats: { "base-attack": 118, "base-defense": 111, "base-stamina": 128 },
+        basePromedio: 119
+      }
+    ];
+
+    expect(resultadoMayor).toEqual(resultadoEsperadoMayor);
+  });
+});
 // describe('anotherExample', () => {
 
 //   it('returns `anotherExample`', () => {

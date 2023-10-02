@@ -56,9 +56,9 @@ export function calcularPromedio(data, orden) {
   });
 
   // Ordena 
-  if (orden === "Mayor") {
+  if (orden === "Menor") {
     return dataConPromedios.sort((a, b) => a.basePromedio - b.basePromedio);
-  } else if (orden === "Menor") {
+  } else if (orden === "Mayor") {
     return dataConPromedios.sort((a, b) => b.basePromedio - a.basePromedio);
   }
 
