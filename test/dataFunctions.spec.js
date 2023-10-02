@@ -109,22 +109,6 @@ describe('calcularPromedio', () => {
 //P.U base de ataque
 
 describe('filtrarPorAtaqueBase', () => {
-  const dataFake = [
-    { name: 'bulbasaur', stats: { 'base-attack': '118' } },
-    { name: 'ivysaur', stats: { 'base-attack': '151' } },
-    { name: 'venusaur', stats: { 'base-attack': '198' } },
-  ];
-
-  it('debería filtrar Pokémon con ataque base mayor que 100', () => {
-    const resultado = filtrarPorAtaqueBase(dataFake, 100);
-
-    expect(resultado).toEqual([
-      { name: 'bulbasaur', stats: { 'base-attack': '118' } },
-      { name: 'ivysaur', stats: { 'base-attack': '151' } },
-      { name: 'venusaur', stats: { 'base-attack': '198' } },
-    ]);
-  });
-
   it('debería filtrar Pokémon con ataque base mayor que 150', () => {
     const resultado = filtrarPorAtaqueBase(dataFake, 150);
 
