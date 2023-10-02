@@ -1,4 +1,4 @@
-import { calcularPromedio, filterData, sortDataByName,  } from '../src/dataFunctions.js';
+import { calcularPromedio, filterData, sortDataByName, filtrarPorAtaqueBase, } from '../src/dataFunctions.js';
 import {  data as fakeData } from './data.js';
 
 console.log(fakeData);
@@ -104,9 +104,40 @@ describe('calcularPromedio', () => {
     expect(resultadoMayor).toEqual(resultadoEsperadoMayor);
   });
 });
-// describe('anotherExample', () => {
 
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
+
+//P.U base de ataque
+
+describe('filtrarPorAtaqueBase', () => {
+  const dataFake = [
+    { name: 'bulbasaur', stats: { 'base-attack': '118' } },
+    { name: 'ivysaur', stats: { 'base-attack': '151' } },
+    { name: 'venusaur', stats: { 'base-attack': '198' } },
+  ];
+
+  it('debería filtrar Pokémon con ataque base mayor que 100', () => {
+    const resultado = filtrarPorAtaqueBase(dataFake, 100);
+
+    expect(resultado).toEqual([
+      { name: 'bulbasaur', stats: { 'base-attack': '118' } },
+      { name: 'ivysaur', stats: { 'base-attack': '151' } },
+      { name: 'venusaur', stats: { 'base-attack': '198' } },
+    ]);
+  });
+
+  it('debería filtrar Pokémon con ataque base mayor que 150', () => {
+    const resultado = filtrarPorAtaqueBase(dataFake, 150);
+
+    expect(resultado).toEqual([
+      { name: 'ivysaur', stats: { 'base-attack': '151' } },
+      { name: 'venusaur', stats: { 'base-attack': '198' } },
+    ]);
+  });
+
+  it('debería filtrar Pokémon con ataque base mayor que 200', () => {
+    const resultado = filtrarPorAtaqueBase(dataFake, 200);
+
+    expect(resultado).toEqual([]);
+  });
+});
+  
