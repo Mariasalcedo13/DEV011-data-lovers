@@ -8,10 +8,15 @@ export const renderItems = (data) => {
     li.setAttribute("itemtype", "pokemon")
     li.setAttribute("class","tarjetaPokedex")
     const img = document.createElement("img");
+    img.setAttribute("itemprop", "imagen")
     const pokenum = document.createElement("pokenum");
+    pokenum.setAttribute("itemprop", "numero")
     const n = document.createElement("n");
+    n.setAttribute("itemprop","name")
     const t = document.createElement("t");
+    t.setAttribute("itemprop", "tipo1")
     const t2 = document.createElement("t2");
+    t2.setAttribute("itemprop", "tipo2")
     img.src = pokemon.img;
     pokenum.textContent = `${pokemon.num}`
     n.textContent = `${pokemon.name}`

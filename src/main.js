@@ -63,7 +63,7 @@ selectData.addEventListener('change', () => {
 });
 
 
-contenedorTarjetas.style.display = 'none'
+// contenedorTarjetas.style.display = 'none'
 
 
 //filtro por ataque
@@ -80,14 +80,15 @@ selectAttack.addEventListener('change', () => {
 
 
 const botonLimpiar = document.querySelector('#Limpiar');
-botonLimpiar.addEventListener('click', function() {
-  // e.preventDefault()
-  // selectFilter.value = ""
-  // selectSort.value = ""
-  // selectData.value = ""
-  // selectAttack.value = ""
+botonLimpiar.addEventListener('click', function(e) {
+  e.preventDefault()
+  selectFilter.value = ""
+  selectSort.value = ""
+  selectData.value = ""
+  selectAttack.value = ""
+  resultFilterAttack = [];
   root.innerHTML = "";
-  root.appendChild(renderItems(data.pokemon));
+  contenedorTarjetas.replaceWith(prueba);
 });
 
 
