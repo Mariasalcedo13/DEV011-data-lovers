@@ -63,6 +63,7 @@ selectData.addEventListener('change', () => {
 });
 
 
+
 // contenedorTarjetas.style.display = 'none'
 
 
