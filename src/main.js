@@ -29,6 +29,9 @@ selectFilter.addEventListener('change',() =>{
   pruebaarray = resultFilter
   root.innerHTML = "";
   root.appendChild(renderItems(resultFilter))
+  // resultFilterAttack = [];
+  // contenedorTarjetas.innerHTML = "";
+  // contenedorTarjetas.replaceWith(renderItems(resultFilter));
 })
 
 //evento por alfabetico
@@ -40,6 +43,9 @@ selectSort.addEventListener('change', () => {
   const resultOrden = sortDataByName(validate, sortOrder);
   root.innerHTML = "";
   root.appendChild(renderItems(resultOrden));
+  // resultFilterAttack = [];
+  // contenedorTarjetas.innerHTML = "";
+  // contenedorTarjetas.replaceWith(resultOrden);
 });
 
 // Evento para cálculos estadísticos
@@ -59,6 +65,9 @@ selectData.addEventListener('change', () => {
   console.log("Datos Calculados:", datosCalculados);
   root.innerHTML = "";
   root.appendChild(renderItems(datosCalculados));
+  //resultFilterAttack = [];
+  // contenedorTarjetas.innerHTML = "";
+  // contenedorTarjetas.replaceWith(datosCalculados);
   return;
 });
 
@@ -76,6 +85,9 @@ selectAttack.addEventListener('change', () => {
   resultFilterAttack = filtrarPorAtaqueBase(data.pokemon, attackValue);
   root.innerHTML = "";
   root.appendChild(renderItems(resultFilterAttack));
+  //resultFilterAttack = [];
+  // contenedorTarjetas.innerHTML = "";
+  // contenedorTarjetas.replaceWith(resultFilterAttack);
 });
 
 
@@ -89,7 +101,9 @@ botonLimpiar.addEventListener('click', function(e) {
   selectAttack.value = ""
   resultFilterAttack = [];
   root.innerHTML = "";
-  contenedorTarjetas.replaceWith(prueba);
+  root.replaceWith(prueba);
+  //const prueba = renderItems(data.pokemon);
+
 });
 
 

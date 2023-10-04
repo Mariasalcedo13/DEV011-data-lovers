@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
 export const renderItems = (data) => {
   /*return 'example';*/
-  const Tarjetas = document.createElement("ul");
+  const root = document.createElement("ul");
   data.forEach(pokemon => {
     const li = document.createElement("li");
     li.setAttribute("itemscope", "")
@@ -29,9 +29,9 @@ export const renderItems = (data) => {
     li.appendChild(n)
     li.appendChild(t)
     li.appendChild(t2)
-    Tarjetas.appendChild(li);
+    root.appendChild(li);
   });
-  return Tarjetas;
+  return root;
 };
 
 
