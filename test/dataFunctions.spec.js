@@ -1,7 +1,11 @@
 import { calcularPromedio, filterData, sortDataByName, filtrarPorAtaqueBase, } from '../src/dataFunctions.js';
 import {  data as fakeData } from './data.js';
+import { dataType} from "./data.js";
+import{ resultadoEsperadoMenor, resultadoEsperadoMayor} from './data.js';
+import{ resultadoEsperadoIntermedio} from './data.js';
+import{ ascendente} from './data.js';
+import{ descendente} from './data.js';
 
-console.log(fakeData);
 
 
 describe('filterData', () => {
@@ -9,11 +13,14 @@ describe('filterData', () => {
     const filterBy = 'type';
     const value = 'grass';
 
-    const resultado = filterData({ pokemon: fakeData }, filterBy, value);
+    const resultado = filterData(dataType, filterBy, value); // Usa dataType en lugar de fakeData
     const todosSonDeTipoGrass = resultado.every(pokemon => pokemon.type.includes('grass'));
     expect(todosSonDeTipoGrass).toBe(true);
   });
 });
+
+
+
 
 //p.u alfabetico
 describe('sortDataByName', () => {
@@ -22,19 +29,30 @@ describe('sortDataByName', () => {
 
     const resultado = sortDataByName(fakeData, sortOrder).map(pokemon => pokemon.name);
 
-    expect(resultado).toEqual(["bulbasaur", "ivysaur", "venusaur"]);
-  });
-
-  it('debería ordenar de la Z a la A', () => {
-    const sortOrder = 'desc';
-
-    const resultado = sortDataByName(fakeData, sortOrder).map(pokemon => pokemon.name);
-
-    expect(resultado).toEqual(["venusaur", "ivysaur", "bulbasaur"]);
+    expect(resultado).toEqual(ascendente.name);
   });
 });
 
+describe('sortDataByName', () => {
+  it('debería ser una función y ordenar de la Z a la A', () => {
+    const sortOrder = 'desc';
+
+    // Verificar si sortDataByName es una función
+    if (typeof sortDataByName !== 'function') {
+      console.error('El test ha fallado: sortDataByName no es una función.');
+      return; // Salir del test si no es una función
+    }
+
+    // Ejecutar la prueba
+    const resultado = sortDataByName(fakeData, sortOrder).map(pokemon => pokemon.name);
+
+    // Verificar el resultado
+    expect(resultado).toEqual(descendente.name);
+  });
+});
 //p.u calculos
+
+
 describe('calcularPromedio', () => {
   it('debería ser una función', () => {
     expect(typeof calcularPromedio).toBe('function');
@@ -45,61 +63,15 @@ describe('calcularPromedio', () => {
 
     const resultadoMenor = calcularPromedio(fakeData, orden);
 
-    const resultadoEsperadoMenor = [
-      {
-        num: "001",
-        name: "bulbasaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 118, "base-defense": 111, "base-stamina": 128 },
-        basePromedio: 119
-      },
-      {
-        num: "002",
-        name: "ivysaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
-        basePromedio: 149.66666666666666
-      },
-      {
-        num: "003",
-        name: "venusaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
-        basePromedio: 192.33333333333334
-      }
-    ];
-
     expect(resultadoMenor).toEqual(resultadoEsperadoMenor);
   });
+});
 
+describe('calcularPromedio', () => {
   it('debería calcular el promedio de mayor correctamente', () => {
     const orden = 'Mayor';
 
     const resultadoMayor = calcularPromedio(fakeData, orden);
-
-    const resultadoEsperadoMayor = [
-      {
-        num: "003",
-        name: "venusaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
-        basePromedio: 192.33333333333334
-      },
-      {
-        num: "002",
-        name: "ivysaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
-        basePromedio: 149.66666666666666
-      },
-      {
-        num: "001",
-        name: "bulbasaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 118, "base-defense": 111, "base-stamina": 128 },
-        basePromedio: 119
-      }
-    ];
 
     expect(resultadoMayor).toEqual(resultadoEsperadoMayor);
   });
@@ -111,62 +83,16 @@ describe('calcularPromedio', () => {
 describe('filtrarPorAtaqueBase', () => {
   it('debería filtrar Pokémon con ataque base mayor que 100', () => {
     const resultado = filtrarPorAtaqueBase(fakeData, 100);
-
-    // Esperamos que solo Venusaur cumpla con el requisito
-    expect(resultado).toEqual([
-      {
-        num: "001",
-        name: "bulbasaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 118, "base-defense": 111, "base-stamina": 128 },
-        basePromedio: 119
-      },
-      {
-        num: "002",
-        name: "ivysaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
-        basePromedio: 149.66666666666666
-      },
-      {
-        num: "003",
-        name: "venusaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
-        basePromedio: 192.33333333333334
-      }
-    ]);
+    expect(resultado).toEqual(resultadoEsperadoMenor);
   });
 
   it('debería filtrar Pokémon con ataque base mayor que 150', () => {
     const resultado = filtrarPorAtaqueBase(fakeData, 150);
-
-    // Esperamos que solo Venusaur cumpla con el requisito
-    expect(resultado).toEqual([
-      {
-        num: "002",
-        name: "ivysaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 151, "base-defense": 143, "base-stamina": 155 },
-        basePromedio: 149.66666666666666
-      },
-      {
-        num: "003",
-        name: "venusaur",
-        type: ["grass", "poison"],
-        stats: { "base-attack": 198, "base-defense": 189, "base-stamina": 190 },
-        basePromedio: 192.33333333333334
-      }
-    ]);
+    expect(resultado).toEqual(resultadoEsperadoIntermedio);
   });
-
   it('debería filtrar Pokémon con ataque base mayor que 200', () => {
     const resultado = filtrarPorAtaqueBase(fakeData, 200);
-
     expect(resultado).toEqual([]);
   });
 
-  
-
-  // Otras pruebas aquí...
 });

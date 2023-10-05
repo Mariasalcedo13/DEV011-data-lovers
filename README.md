@@ -3,13 +3,13 @@
 ## Índice
 
 
-* 1. Resumen del proyecto::pestañas_de_marcadores:
-* 2. Descripción del proyecto::nota:
-* 3. Investigación UX:sabueso_o_espía:
-* 4. Aspectos generales:clip:
-* 5. Pruebas unitarias:100:
-* 6. CheckList:marca_de_verificación_gruesa:
-* 7. Recursos:bocadillo_de_diálogo::libros:
+* 1. Resumen del proyecto:[1#-Resumen-del-proyecto:]
+* 2. Descripción del proyecto::nota:[2#Descripción-del-proyecto:]
+* 3. Investigación UX:sabueso_o_espía:[3#Investigación-UX:]
+* 4. Aspectos generales:clip:[4#Aspectos-generales:]
+* 5. Pruebas unitarias:[5#Pruebas-unitarias:]
+* 6. CheckList:marca_de_verificación_gruesa:[6#CheckList:marca_de_verificación_gruesa:]
+* 7. Recursos:bocadillo_de_diálogo::libros:[7#Recursos:bocadillo_de_diálogo::libros:]
 ***
 
 ## 1. Resumen de proyecto

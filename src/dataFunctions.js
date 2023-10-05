@@ -1,11 +1,11 @@
 // estas funciones son de ejemplo
 
 export const example = () => {
-  return 'example';
+  
 };
 
 export const anotherExample = () => {
-  return [];
+ 
 };
 
 
@@ -32,13 +32,15 @@ export const sortDataByName = (data, sortOrder) => {
     const nameB = b.name.toLowerCase();
 
     if (sortOrder === 'asc') {
-      if (nameA < nameB) return -1;
-      if (nameA > nameB) return 1;
-      return 0;
+      return (
+        (nameA < nameB ? -1 : 0) ||
+        (nameA > nameB ? 1 : 0)
+      );
+      //return 0;
     } else if (sortOrder === 'desc') {
       if (nameA > nameB) return -1;
-      if (nameA < nameB) return 1;
-      return 0;
+      // if (nameA < nameB) return 1;
+      // return 0;
     }
   });
 
@@ -62,7 +64,7 @@ export function calcularPromedio(data, orden) {
     return dataConPromedios.sort((a, b) => b.basePromedio - a.basePromedio);
   }
 
-  return dataConPromedios;
+  //return dataConPromedios;
 }
 
 // TODO: revisar si funciona con parseInt
