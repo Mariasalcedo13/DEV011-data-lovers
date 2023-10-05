@@ -3,6 +3,7 @@
 ## Índice
 
 
+
 * 1. Resumen del proyecto::pestañas_de_marcadores:
 * 2. Descripción del proyecto::nota:
 * 3. Investigación UX:sabueso_o_espía:
@@ -10,6 +11,7 @@
 * 5. Pruebas unitarias:100:
 * 6. CheckList:marca_de_verificación_gruesa:
 * 7. Recursos:bocadillo_de_diálogo::libros:
+
 ***
 
 ## 1. Resumen de proyecto
@@ -117,7 +119,4 @@ Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
   - [ ✔ ] Permite filtrar data con base en una condición
   - [ ✔ ] Permite limpiar los filtros con un botón
   - [ ✔ ] Es _responsive_
-
-
-7. Recursos :bocadillo_de_diálogo::libros:: ahi va todos link de los videos vistos
 
